@@ -32,7 +32,6 @@ static const Rule rules[] = {
 	{ "Gimp",           NULL,       NULL,       0,            1,           -1 },
 	{ "mpv",            NULL,       NULL,       0,            1,           -1 },
 	{ "qemu-system",    NULL,       NULL,       0,            1,           -1 },
-	{ "Nxplayer.bin",   NULL,       NULL,       0,            1,           -1 },
 	{ "Google-chrome",  NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox-esr",    NULL,       NULL,       0,            1,           -1 },
 };
@@ -62,15 +61,17 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg_norm, "-nf", col_fg_norm, "-sb", col_bg_sel, "-sf", col_fg_sel, NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *slockcmd[] = { "slock", NULL };
+static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg_norm, "-nf", col_fg_norm, "-sb", col_bg_sel, "-sf", col_fg_sel, NULL };
+static const char *termcmd[]    = { "st", NULL };
+static const char *slockcmd[]   = { "slock", NULL };
+static const char *browsercmd[] = { "sensible-browser", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
+	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
