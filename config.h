@@ -80,6 +80,10 @@ static const char *downvol[] = { "amixer", "-q", "sset", "Master", "2%-", "unmut
 static const char *mutevol[] = { "amixer", "-q", "sset", "Master", "toggle", NULL };
 static const char *mutemic[] = { "amixer", "-q", "sset", "Capture", "toggle", NULL };
 
+static const char *playerprev[] = { "playerctl", "previous", NULL };
+static const char *playerplay[] = { "playerctl", "play-pause", NULL };
+static const char *playernext[] = { "playerctl", "next", NULL };
+
 static Key keys[] = {
 	/* modifier                     key                       function        argument */
 	{ MODKEY,                       XK_p,                     spawn,          {.v = dmenucmd } },
@@ -115,6 +119,9 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
 	{ 0,                            XF86XK_AudioMute,         spawn,          {.v = mutevol } },
 	{ 0,                            XF86XK_AudioMicMute,      spawn,          {.v = mutemic } },
+	{ 0,                            XF86XK_AudioPrev,         spawn,          {.v = playerprev } },
+	{ 0,                            XF86XK_AudioPlay,         spawn,          {.v = playerplay } },
+	{ 0,                            XF86XK_AudioNext,         spawn,          {.v = playernext } },
 	TAGKEYS(                        XK_1,                                     0)
 	TAGKEYS(                        XK_2,                                     1)
 	TAGKEYS(                        XK_3,                                     2)
