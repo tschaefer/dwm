@@ -66,7 +66,7 @@ static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufon
 
 static const char *termcmd[]    = { "alacritty", NULL };
 static const char *slockcmd[]   = { "slock", NULL };
-static const char *browsercmd[] = { "sensible-browser", NULL };
+static const char *browsercmd[] = { "vivaldi", NULL };
 
 static const char *brighter[] = { "brightnessctl", "-q", "set", "5%+", NULL };
 static const char *dimmer[]   = { "brightnessctl", "-q", "set", "5%-", NULL };
