@@ -8,8 +8,8 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappx     = 10;       /* gaps between windows */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Terminus:pixelsize=14:antialias=false:autohint=false" };
-static const char dmenufont[]       = "Terminus:pixelsize=14:antialias=false:autohint=false";
+static const char *fonts[]          = { "xos4 Terminus:pixelsize=14:antialias=false:autohint=false" };
+static const char dmenufont[]       = "xos4 Terminus:pixelsize=14:antialias=false:autohint=false";
 static const char col_bg_norm[]     = "#002b36";
 static const char col_bd_norm[]     = "#586e75";
 static const char col_fg_norm[]     = "#839496";
